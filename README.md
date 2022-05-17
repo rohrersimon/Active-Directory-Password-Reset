@@ -1,32 +1,24 @@
-<h1>Active Directory Password Reset Guide Lab</h1>
+<h1>Active Directory Password Reset Guide</h1>
 
 <h2>Description</h2>
-Quick guide on how to reset a user password in Active Directory
+Quick guide on the simplest way to reset a user password in Active Directory using Windows Server 2019.
 <br />
 
-<h2>Software & Tools Used</h2>
+<h2>Walk-through</h2>
 
-- <b>Active Directory</b> 
-- <b>PowerShell</b>
-- <b>Virtualbox</b>
-- <b>Windows Server 2019</b>
-- <b>Windows 11</b>
-
-<h2>Project walk-through</h2>
-
-<h3>Network plan for project environment</h3> 
+Klick on the 'Tools' menu in Server Manager and select the 'Active Directory Users and Computers' option.
 <br />
-<img src="https://i.imgur.com/vpqGEXe.png" height="80%" width="80%" />
-
-<h3>Virtualbox performance issues</h2>
-I was creating a virtual machine to install Windows Server 2019 and ran into strong performance issues: The mouse was so slow it became impossible to click on things. When typing, the letters would show up only about a minute later. I had different theories about what could be the problem. I went through the troubleshooting process step-by-step:
-
- - Performance of my laptop: Ruled out because of i7 Intel processor and 8Gb RAM on my host device.
- - Hardware ressources allocated to virtual machine: Increased from 1Gb to 2Gb RAM and gave it 2 instead of 1 CPU core. No significant change in performance.
- - Virtualisation not activated in BIOS (UEFI in my laptop's case): This ended up to be the solution. However, I had to research the difference between Windows own Hyper-V technology which is definitely not what Virtualbox uses and Intel's VT-x which is what I needed. After activating VT-x Virtualbox performed as expected.
-<br />
-<img src="https://i.imgur.com/YSYWoaM.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/AZU7HqI.png" height="80%" width="80%" />
 <br />
 <br />
-With Virtualbox now running as intended, I went ahead and created the first virtual machine to serve as our Windows Server 2019 and Active Directory Domain Services (DC on the Network plan). <br />
+Find the correct folder where the users are stored. In my case, I called it "_Users". Rightclick on the folder and select 'Find...'.<br />
 <br />
+<img src="https://i.imgur.com/9P0hOsP.png" height="80%" width="80%" />
+<br />
+<br />
+Type in the username in the corresponding field to find the correct user. Rightclick on the user as seen below and define a new password.<br />
+<br />
+<img src="https://i.imgur.com/l4jrqqu.png" height="80%" width="80%" />
+<br />
+<br />
+Make sure you communicate this password to the user in a safe manner. Further, make sure the user is able to login and guide them through changing their own password.

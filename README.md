@@ -6,12 +6,12 @@ Quick guide on the simplest way to reset a user password in Active Directory usi
 
 <h2>Walk-through</h2>
 
-Klick on the 'Tools' menu in Server Manager and select the 'Active Directory Users and Computers' option.
+Klick on the 'Tools' menu in Server Manager and select the 'Active Directory Users and Computers' option.<br />
 <br />
 <img src="https://i.imgur.com/AZU7HqI.png" height="80%" width="80%" />
 <br />
 <br />
-Find the correct folder where the users are stored. In my case, I called it "_Users". Rightclick on the folder and select 'Find...'.<br />
+In Active Directory Users and Computers, find the correct folder where the users are stored. In my case I called it "_Users". Rightclick on the folder and select 'Find...'.<br />
 <br />
 <img src="https://i.imgur.com/9P0hOsP.png" height="80%" width="80%" />
 <br />
